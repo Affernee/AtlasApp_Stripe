@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -8,8 +8,8 @@
       setTimeout(() => {
         // Obtén los parámetros de la URL (por ejemplo: ?suscripcion=pro&session_id=...)
         const params = window.location.search;
-        // Cambia 'atlasapp' por el scheme de tu app si es diferente
-        window.location.href = "atlasapp://suscripcion-exitosa" + params;
+        // Usa el scheme correcto de tu app
+        window.location.href = "atlas-solutions-app://suscripcion-exitosa" + params;
       }, 1000);
     </script>
     <style>
@@ -33,26 +33,21 @@
         margin-bottom: 24px;
       }
       @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
+        0% { transform: rotate(0deg);}
+        100% { transform: rotate(360deg);}
       }
     </style>
   </head>
   <body>
     <div class="loader"></div>
     <h2>Redirigiendo a la app...</h2>
-    <p>
-      Si no eres redirigido automáticamente,<br />
+    <p>Si no eres redirigido automáticamente,<br>
       <a id="manual-link" href="#">haz clic aquí</a>
     </p>
     <script>
       // También permite redirección manual si el navegador lo bloquea
-      document.getElementById("manual-link").href =
-        "atlasapp://suscripcion-exitosa" + window.location.search;
+      document.getElementById('manual-link').href =
+        "atlas-solutions-app://suscripcion-exitosa" + window.location.search;
     </script>
   </body>
 </html>
